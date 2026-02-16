@@ -15,7 +15,7 @@ namespace SportsManagementApp.Data
         public DbSet<EventRequest> EventRequests { get; set; }
         public DbSet<Event> Events { get; set; }
         public DbSet<EventCategory> EventCategories { get; set; }
-        public DbSet<ParticipantRegistration> EventRegistrations { get; set; }
+        public DbSet<ParticipantRegistration> ParticipantRegistrations { get; set; }
         public DbSet<Team> Teams { get; set; }
         public DbSet<TeamMember> TeamMembers { get; set; }
         public DbSet<Match> Matches { get; set; }
@@ -51,6 +51,45 @@ namespace SportsManagementApp.Data
                     PasswordHash = "Test@123",
                     RoleId = 2,
                     CreatedAt = new DateTime(2026, 2, 12, 10, 0, 0)
+                }
+            );
+
+            modelBuilder.Entity<Sport>().HasData(
+                new Sport
+                {
+                    Id = 1,
+                    Name = "Badminton",
+                    CreatedAt = new DateTime(2026, 2, 16, 10, 0, 0),
+                },
+                new Sport
+                {
+                    Id = 2,
+                    Name = "Carrom",
+                    CreatedAt = new DateTime(2026, 2, 16, 10, 0, 0),
+                },
+                new Sport
+                {
+                    Id = 3,
+                    Name = "Chess",
+                    CreatedAt = new DateTime(2026, 2, 16, 10, 0, 0),
+                },
+                new Sport
+                {
+                    Id = 4,
+                    Name = "Foosball",
+                    CreatedAt = new DateTime(2026, 2, 16, 10, 0, 0),
+                },
+                new Sport
+                {
+                    Id = 5,
+                    Name = "Pool",
+                    CreatedAt = new DateTime(2026, 2, 16, 10, 0, 0),
+                },
+                new Sport
+                {
+                    Id = 6,
+                    Name = "Table Tennis",
+                    CreatedAt = new DateTime(2026, 2, 16, 10, 0, 0),
                 }
             );
 
