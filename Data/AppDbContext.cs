@@ -33,66 +33,6 @@ namespace SportsManagementApp.Data
                 new Role { Id = 4, RoleType = RoleType.Participant }
             );
 
-            modelBuilder.Entity<User>().HasData(
-                new User
-                {
-                    Id = 1,
-                    FullName = "Himani Jangid",
-                    Email = "himani.jangid@intimetec.com",
-                    PasswordHash = "Admin@123",
-                    RoleId = 1,
-                    CreatedAt = new DateTime(2026, 2, 12, 10, 0, 0)
-                },
-                new User
-                {
-                    Id = 2,
-                    FullName = "Operations Team",
-                    Email = "operationsteam@test.com",
-                    PasswordHash = "Test@123",
-                    RoleId = 2,
-                    CreatedAt = new DateTime(2026, 2, 12, 10, 0, 0)
-                }
-            );
-
-            modelBuilder.Entity<Sport>().HasData(
-                new Sport
-                {
-                    Id = 1,
-                    Name = "Badminton",
-                    CreatedAt = new DateTime(2026, 2, 16, 10, 0, 0),
-                },
-                new Sport
-                {
-                    Id = 2,
-                    Name = "Carrom",
-                    CreatedAt = new DateTime(2026, 2, 16, 10, 0, 0),
-                },
-                new Sport
-                {
-                    Id = 3,
-                    Name = "Chess",
-                    CreatedAt = new DateTime(2026, 2, 16, 10, 0, 0),
-                },
-                new Sport
-                {
-                    Id = 4,
-                    Name = "Foosball",
-                    CreatedAt = new DateTime(2026, 2, 16, 10, 0, 0),
-                },
-                new Sport
-                {
-                    Id = 5,
-                    Name = "Pool",
-                    CreatedAt = new DateTime(2026, 2, 16, 10, 0, 0),
-                },
-                new Sport
-                {
-                    Id = 6,
-                    Name = "Table Tennis",
-                    CreatedAt = new DateTime(2026, 2, 16, 10, 0, 0),
-                }
-            );
-
             modelBuilder.Entity<TeamMember>()
                 .HasOne(member => member.User)
                 .WithMany(user => user.TeamMembers)
